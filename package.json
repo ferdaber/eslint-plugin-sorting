@@ -1,0 +1,19 @@
+{
+  "name": "@ferdaber/eslint-plugin-sorting",
+  "version": "0.1.0-12",
+  "main": "lib/index.js",
+  "author": "Ferdy Budhidharma",
+  "scripts": {
+    "build": "babel src --no-comments --source-maps --out-dir lib",
+    "watch": "yarn build --watch",
+    "prepublishOnly": "yarn build"
+  },
+  "peerDependencies": {
+    "eslint": "^6.8.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0"
+  }
+}
