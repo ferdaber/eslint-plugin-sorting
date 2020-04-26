@@ -1,6 +1,6 @@
 {
   "name": "@ferdaber/eslint-plugin-sorting",
-  "version": "0.1.0-12",
+  "version": "0.1.0",
   "main": "lib/index.js",
   "author": "Ferdy Budhidharma",
   "scripts": {
