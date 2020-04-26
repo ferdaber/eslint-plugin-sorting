@@ -86,7 +86,7 @@ function getImportDeclarationSortIdx(node) {
   if (isImportSideEffect(node)) {
     return DECL_PRIORITIES.SideEffect
   }
-  if (/\.(svg|woff|woff2|tts|eot|bmp|jpe?g|gif|png)$/.test(importSource)) {
+  if (/\.(svg|woff|woff2|tts|eot|bmp|jpe?g|gif|png|json|txt)$/.test(importSource)) {
     return DECL_PRIORITIES.StaticAsset
   }
   if (isImportExternal(node)) {
@@ -150,7 +150,7 @@ const rule = {
   },
   create(context) {
     const options = context.options[0] || {}
-    const { declarationSort = 'import', fix = false } = options
+    const { declarationSort = 'source', fix = false } = options
     return {
       /** @param {import('babel-types').Program} program */
       Program(program) {

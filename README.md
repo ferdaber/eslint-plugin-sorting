@@ -94,21 +94,21 @@ import SomeImage from '../images.png'
 
 Changes the sorting strategy for import declarations based on their source (`'source'`) vs. on their imported names (`'import'`).
 
-Example of **incorrect** code for this rule with the default `{ "declarationSort": "import" }` option:
+Example of **incorrect** code for this rule with the default `{ "declarationSort": "source" }` option:
 
 ```js
 import module1 from 'module-b'
 import module2 from 'module-a'
 ```
 
-Example of **correct** code for this rule with the default `{ "declarationSort": "import" }` option:
+Example of **correct** code for this rule with the default `{ "declarationSort": "source" }` option:
 
 ```js
 import module2 from 'module-a'
 import module1 from 'module-b'
 ```
 
-Example of **incorrect** code for this rule with the `{ "declarationSort": "source" }` option:
+Example of **incorrect** code for this rule with the `{ "declarationSort": "import" }` option:
 
 ```js
 import moduleB from 'module-a'
@@ -116,7 +116,7 @@ import * as moduleD from 'module-d'
 import moduleA, { moduleC } from 'module-c'
 ```
 
-Example of **correct** code for this rule with the `{ "declarationSort": "source" }` option:
+Example of **correct** code for this rule with the `{ "declarationSort": "import" }` option:
 
 ```js
 import moduleA, { moduleC } from 'module-c'
